@@ -1,0 +1,13 @@
+{
+    "name": "ahmadasjad/yii1plushyii2",
+    "type": "library, plugin",
+    "require": {
+        "yiisoft/yii2": "^2.0"
+    },
+    "authors": [
+        {
+            "name": "Ahmad Asjad",
+            "email": "ahmadcimage@gmail.com"
+        }
+    ]
+}
