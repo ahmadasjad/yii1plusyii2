@@ -9,7 +9,22 @@
 * https://www.yiiframework.com/doc/guide/2.0/en/intro-upgrade-from-v1
 
 ### Steps to follow
-- Register Yii2 assets in yii1
+
+>**: Mandatory
+
+>*: Somehow mandatory 
+
+> (no star): optional
+
+- Replace View class**
+    
+    Add this to your Yii2 config
+    ```php
+    'components' => [
+        'view' => ['class' => \ahmadasjad\yii1PlusYii2\View::class],
+    ]
+    ```
+- Register Yii2 assets in yii1*
     
     Add `Yii::$app->getView()->registerYii2Assets();` inside the layout or view file. This will create a bridge in publishing Yii2 assets in yii1.
 
