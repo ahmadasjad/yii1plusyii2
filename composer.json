@@ -1,6 +1,7 @@
 {
     "name": "ahmadasjad/yii1plusyii2",
-    "type": "library, plugin",
+    "description": "A library to use yii1 and Yii2 together",
+    "type": "library",
     "require": {
         "yiisoft/yii2": "^2.0"
     },
