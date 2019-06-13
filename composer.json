@@ -1,5 +1,5 @@
 {
-    "name": "ahmadasjad/yii1plushyii2",
+    "name": "ahmadasjad/yii1plusyii2",
     "type": "library, plugin",
     "require": {
         "yiisoft/yii2": "^2.0"
@@ -9,5 +9,10 @@
             "name": "Ahmad Asjad",
             "email": "ahmadcimage@gmail.com"
         }
-    ]
+    ],
+    "autoload": {
+        "psr-4": {
+            "ahmadasjad\\yii1PlusYii2\\": "src/"
+        }
+    }
 }
