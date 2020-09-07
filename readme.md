@@ -41,6 +41,38 @@ For every step, I have created two repository. We'll use it accordingly
     Add `Yii::$app->getView()->registerYii2Assets();` inside the layout or view file. This will create a bridge in publishing Yii2 assets in yii1.
 - add `return` before `render('yourView', ['model' => $model])` call inside every controller.
 - Make your controllers namespaced *: https://www.yiiframework.com/doc/guide/1.1/en/basics.namespace#namespaced-controllers
+- Add following function inside the config while bootstrapping the app:
+    ```php
+    function() {
+        //Set modelName converter for Yii1 models class in html form
+        CHtml::setModelNameConverter(function ($model){
+            $className = get_class($model);
+            $reflector = new ReflectionClass($className);
+            return $reflector->getShortName();
+        });
+    }
+    ```
+    Now your config should look like:
+    ```php
+    return [
+        ...,
+        'aliases' => [...],
+        'bootstrap' => [
+            ...,
+            function() {
+                //Set modelName converter for Yii1 models class in html form
+                CHtml::setModelNameConverter(function ($model){
+                    $className = get_class($model);
+                    $reflector = new ReflectionClass($className);
+                    return $reflector->getShortName();
+                });
+            },
+            ...,
+        ],
+        'components' => [...],
+        ...
+    ];
+    ```
 
 
 
