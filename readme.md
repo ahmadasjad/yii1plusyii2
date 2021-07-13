@@ -17,6 +17,13 @@ For every step, I have created two repository. We'll use it accordingly
 > (no star): optional
 
 - Make your project composer compatible and use yii1 with composer dependency**
+
+    Add classmap in autoloader, and put all you resources folder in its value
+
+    `composer dump-autoload`
+
+    Resolve all warning for **Ambiguous class resolution**
+
 - Install my both repo using composer**
     ```
     composer require ahmadasjad/yii1plushyii2
